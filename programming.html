@@ -1,0 +1,112 @@
+<!doctype HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles/main.css" >
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+        </script>
+        
+        <script> 
+            $(function(){
+              $("#header").load("header.html"); 
+            });
+        </script>
+    </head>
+    <body>
+        <div id="header"></div>
+        <div id="slideshow">
+          <div><b>Programming</b></div>
+          <div><b>Programming</b></div>
+        </div>
+        <script>
+          $("#slideshow > div:gt(0)").hide();
+
+          setInterval(function() {
+            $('#slideshow > div:first')
+              .fadeOut(1000)
+              .next()
+              .fadeIn(1000)
+              .end()
+              .appendTo('#slideshow');
+          }, 3000);
+        </script>
+      <div class="middleTextBody">
+        <div class="textBodyInside">
+          <details>
+            <summary>Enterra</summary>
+            <div class="content">
+                <h1><a href="https://enterraofficial.com/" target="_blank">Enterra</a></h1>
+                <p>
+                  Enterra is a 3D platformer in the style of Super Mario 64, where the player explores areas to find items to progress through the game.
+                   A big focus on the game was making sure the movement was smooth and enjoyable.
+                </p>
+                <div class="center">
+                  <img src="img/01.PNG" width=50% height=50%;>
+                  <img src="img/02.PNG" width=50% height=50%;>
+                  <img src="img/03.PNG" width=50% height=50%;>
+                  <img src="img/04.PNG" width=50% height=50%;>
+                  <img src="img/05.PNG" width=50% height=50%;>
+                </div>
+            </div>
+          </details>
+          <details>
+            <summary>AI Generated Music</summary>
+            <div class="content">
+              <h1>A Walk in the Park</h1>
+              <p>
+                 A walk in the park is a piece of music that will always be random. This piece has some performative aspects where the player is given random instructions.
+              </p>
+              <div class="center">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/r_wfTkaN8Yk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <h1>AI Music</h1>
+              <p>
+                 The melody, harmony, and rhythm of this piece is completely randomized, having an AI write the music on the spot.
+              </p>
+              <div class="center">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Lg2bvALmqHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>Marching Mapper</summary>
+            <div class="content">
+              <h1><a href="https://gamejolt.com/games/Marchingmapper/273000" target="_blank">Marching Mapper</a></h1>
+                <p>
+                  Marching Mapper is a tool to create marchng band drill. It can print dot cards, show a 3D view, and sync to music.
+                </p>
+                <div class="center">
+                    <img src="https://m.gjcdn.net/game-screenshot/1200/974592-ll-qcxegqcf-v4.webp" width=50% height=50%;>
+                    <img src="https://m.gjcdn.net/game-screenshot/1200/974591-b48wap6x-v4.webp" width=50% height=50%;>
+                    <img src="https://m.gjcdn.net/game-screenshot/1200/974589-ynpjwicu-v4.webp" width=50% height=50%;>
+                </div>
+            </div>
+          </details>
+          <details>
+            <summary>The Lord of the Flies</summary>
+            <div class="content">
+              <h1><a href="https://gamejolt.com/games/the-lord-of-the-flies/40286" target="_blank">The Lord of the Flies</a></h1>
+              <p>
+                Based on the novel by Willian Golding. This game takes the book into a new perspective. Featured on the front page
+                of Gamejolt, this was one of my first big milestones in programming. It's not perfect, but an interesting thing I programmed in early high school.
+              </p>
+              <div class="center">
+                <img src="https://m.gjcdn.net/game-screenshot/900/77578-jzwmcwnw-v4.webp" width=50% height=50%;>
+                <img src="https://m.gjcdn.net/game-screenshot/900/76766-yqucckka-v4.webp" width=50% height=50%;>
+              </div>
+                  
+            </div>
+          </details>
+        </div>
+      </div>
+      <script src="/js/accordian.js">
+      </script>
+      <script  src="js/player.js"></script>
+    </body>
+    <footer>
+    </footer>
+</html>

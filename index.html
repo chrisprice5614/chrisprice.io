@@ -1,0 +1,86 @@
+<!doctype HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles/main.css" >
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+        </script>
+        <script> 
+            $(function(){
+              $("#header").load("header.html"); 
+            });
+        </script>
+    </head>
+    <body>
+        <div id="header"></div>
+        <div id="slideshow">
+          <div><b>Friend.</b></div>
+          <div><b>Composer.</b></div>
+          <div><b>Challenger.</b></div>
+          <div><b>Thinker.</b></div>
+          <div><b>Coder.</b></div>
+          <div><b>Designer.</b></div>
+          <div><b>Brother.</b></div>
+        </div>
+        <script>
+          $("#slideshow > div:gt(0)").hide();
+
+          setInterval(function() {
+            $('#slideshow > div:first')
+              .fadeOut(1000)
+              .next()
+              .fadeIn(1000)
+              .end()
+              .appendTo('#slideshow');
+          }, 3000);
+        </script>
+        <div class="textBodyContainerL">
+          <div class="textBodyInside">
+            <div class="textBody">
+              Creation. I love the idea of creation. Desinging, planning, building. Ever since I was a small child I wanted to make everything myself. I would create my own card games, my own
+              stories, my own music. To this day, the idea of creation is still deep within me, driving me to create. This website you're looking at was made from my drive to create. My interests
+              are always intertwined with my need to make things. When I'm playing a video game with a friend I want to record the experience and create YouTube videos from it. When I'm listening
+              to a song I like I want to write an arrangement of that piece for a big marching band. I'll always have this desire to make things, and it keeps going in this world. Let me 
+              create something for you.
+              </div>
+          </div>
+        </div>
+        <div class="textBodyContainerR">
+          <div class="textBodyInside">
+            <div class="textBody">
+              I remember wanting to be a video game programmer when I was young. At the age of 8, I learned how to program basic video games through GameMaker 7.
+              The neighbor who was babysitting me was shocked to see a nine year-old develop a mock Pac-Man game. Lots of my inspiration for my video games as a child
+              was from my sister. She also inspired me to learn a string instrument, the cello, when I was 12. I chose cello instead of her instrument, viola, due to a man making a race-car noise
+              on a cello. I started to learn piano at the same time, kicking off my music interest. Music came easy to me, with my teacher saying I could learn any instrument I could put my
+              hands on. I composed my first piece by the age of 13. Discordant and lost, the piece will only remain as a tune I can hum in my head.
+            </div>
+            <div class="textBody">
+              My first commission as a programmer was to build a website at the age of 13. My client was a friend of my Mom's, who sadly moved away and I didn't get a chance to work
+              with them anymore. Come high school I start writing and programing more. I had <a href="https://gamejolt.com/games/the-lord-of-the-flies/40286" target="_blank">
+              this game</a> featured on the front of gamejolt. Through high school I continued programming and composing, eventually learning brass instruments. My first commissioned
+              arrangement was for my school, where I would then write many arrangements for our basketball games. "You know your band is cool when they play Pantera" is my favorite
+              thing anyone has said about my arrangements.
+            </div>
+            <div class="textBody">
+              I joined the Columbians Drum and Bugle corps in 2017, marching euphonium for the summer. My senior year of high school had me winning a programming competetion with
+              a coupole friends. I was the programmer where my other friends were creating assets and
+              giving me ideas for the game. We created a procedurally generated platformer game, winning first place. The rest of the year was filled with music commissions and
+              developing software for marching band drill creation. For my classes I would create visualizations of subjects we were learning, such as a 3d animation of different
+              cell functions.
+            </div>
+            <div class="textBody">
+              After graduating high school I attended Whitworth University to study music composition. Throughout college I developed more software and wrote for many commissioned work.
+              My work started to get international, such as when I arranged 5 jazz suites for an orchestra in Montreal, Canada. My knowledge in computer science grew as well, where
+              I learned more programming languages and important software, such as Blender, Unreal Engine, and Photoshop. The summer before my senior year I got hired as a door-to-door
+              salesman for Fox Pest Control in Louisiana, living there for a few months.
+            </div>
+          </div>
+        </div>
+    </body>
+    <footer>
+    </footer>
+</html>

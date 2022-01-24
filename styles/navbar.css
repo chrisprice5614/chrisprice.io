@@ -1,0 +1,42 @@
+.navBarMain{
+    width: 100%;
+    float: left;
+    background-color: black;
+    color: white;
+    font-size: 24pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navBarMain:after {
+    clear: both;
+}
+
+.navBarMain a{
+    float: left;
+    color: white;
+    text-decoration: none;
+}
+
+
+.navBarMain .container{
+    float: left;
+    padding: 24px;
+}
+
+.navBarMain a:hover{
+    color: rgb(0, 255, 0);
+    text-decoration: underline;
+}
+
+.navBarRight{
+    float: right;
+    padding-top: 24px;
+    padding-left: 0;
+    padding-right: 24px;
+}
+
+.navBarRight a{
+    color: white;
+    text-decoration: none;
+    padding-right: 6px;
+}
