@@ -1,9 +1,8 @@
-<!doctype HTML>
+<!doctype html>
 <html>
     <head>
+        <title>I'm Chris Price</title>
         <link rel="stylesheet" href="/styles/main.css" >
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <script
         src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -16,71 +15,143 @@
         </script>
     </head>
     <body>
-        <div id="header"></div>
-        <div id="slideshow">
-          <div><b>Friend.</b></div>
-          <div><b>Composer.</b></div>
-          <div><b>Challenger.</b></div>
-          <div><b>Thinker.</b></div>
-          <div><b>Coder.</b></div>
-          <div><b>Designer.</b></div>
-          <div><b>Brother.</b></div>
-        </div>
-        <script>
-          $("#slideshow > div:gt(0)").hide();
-
-          setInterval(function() {
-            $('#slideshow > div:first')
-              .fadeOut(1000)
-              .next()
-              .fadeIn(1000)
-              .end()
-              .appendTo('#slideshow');
-          }, 3000);
-        </script>
-        <div class="textBodyContainerL">
-          <div class="textBodyInside">
-            <div class="textBody">
-              Creation. I love the idea of creation. Desinging, planning, building. Ever since I was a small child I wanted to make everything myself. I would create my own card games, my own
-              stories, my own music. To this day, the idea of creation is still deep within me, driving me to create. This website you're looking at was made from my drive to create. My interests
-              are always intertwined with my need to make things. When I'm playing a video game with a friend I want to record the experience and create YouTube videos from it. When I'm listening
-              to a song I like I want to write an arrangement of that piece for a big marching band. I'll always have this desire to make things, and it keeps going in this world. Let me 
-              create something for you.
+        
+        <div class="slider">
+  
+            <div class="linkBlock">
+                <div class="links"><a href="#slide-1">Home</a></div>
+                <div class="links"><a href="#slide-2">Music</a></div>
+                <div class="links"><a href="#slide-3">Programming</a></div>
+            </div>
+          
+            <div class="slides">
+              <div id="slide-1">
+                
+                <div class="mains">
+                    
+                    I'm Chris Price<br>
+                    <img src="/img/me.png">
+                    <br><br>
+                    <div id="slideshow">
+                        <div><b>Composer.</b></div>
+                        <div><b>Programmer.</b></div>
+                        <div><b>Asset.</b></div>
+                      </div>
+                      <script>
+                        $("#slideshow > div:gt(0)").hide();
+              
+                        setInterval(function() {
+                          $('#slideshow > div:first')
+                            .fadeOut(1000)
+                            .next()
+                            .fadeIn(1000)
+                            .end()
+                            .appendTo('#slideshow');
+                        }, 3000);
+                      </script>
+                    
+                </div> 
+                    
+                
               </div>
-          </div>
-        </div>
-        <div class="textBodyContainerR">
-          <div class="textBodyInside">
-            <div class="textBody">
-              I remember wanting to be a video game programmer when I was young. At the age of 8, I learned how to program basic video games through GameMaker 7.
-              The neighbor who was babysitting me was shocked to see a nine year-old develop a mock Pac-Man game. Lots of my inspiration for my video games as a child
-              was from my sister. She also inspired me to learn a string instrument, the cello, when I was 12. I chose cello instead of her instrument, viola, due to a man making a race-car noise
-              on a cello. I started to learn piano at the same time, kicking off my music interest. Music came easy to me, with my teacher saying I could learn any instrument I could put my
-              hands on. I composed my first piece by the age of 13. Discordant and lost, the piece will only remain as a tune I can hum in my head.
+              <div id="slide-2">
+                <div class="slidebox">
+                    <div class="grow">
+                        <a href="#slide-2" onclick="cs_change_music('/audio/Rememberance.mp3','Rememberance');">Rememberance</a>
+                        <br>Cinematic piece of music demonstrating<br>the emotional captivation music can have.<br><br>
+                        I especially enjoy this piece because<br>of how powerful the sound samples are.
+                    </div>
+                    <div class="grow">
+                        <a href="#slide-2" onclick="cs_change_music('/audio/2012.mp3','2012');">2012</a>
+                        <br>2012 is one of the best marching band<br>shows I've written.<br><br>
+                        Each movement of the show highlights<br>a different style of performance.
+                    </div>
+                    <div class="grow">
+                        <a href="#slide-2" onclick="cs_change_music('/audio/car.mp3','Car Comercial');">Car Comercial</a>
+                        <br>This piece emphasizes how well I'm<br>able to write music for any setting.<br><br>
+                        The cello arpeggios and overarching strings<br>show off the eligance of the product.
+                    </div>
+                    <br><br>
+                    <div class="grow">
+                        <a href="#slide-2" onclick="cs_change_music('/audio/RustedCity.mp3','Rusted City');">Rusted City</a>
+                        <br>Written as if for a video game.<br><br>
+                        What's really fun about this piece is the<br>chord progression bouncing back and forth a tritone.<br>
+                        There are several examples of sampling and remixing in this piece.
+                    </div>
+                </div>
+                <div class="slidebox">
+                    <div class="grow">
+                        <a href="#slide-2" onclick="cs_change_music('/audio/Grassland.mp3','Grassland');">Grassland</a>
+                        <br>More video game music!<br><br>
+                        Written for my game, Enterra, this piece<br>is meant to introduce the player to the game<br>
+                        and orient them with the overall playstyle.
+                    </div>
+                    <div class="grow">
+                        <a href="#slide-2" onclick="cs_change_music('/audio/bepis.mp3','Bepis and Baja');">Bepis and Baja</a>
+                        <br>Fun sax quartet piece.<br><br>
+                        In this piece I made sure to highlight<br>my writing style, which has lots of spun out<br>
+                        melodies and fun things for the performers.
+                    </div>
+                    <div class="grow">
+                        <a href="#slide-2" onclick="cs_change_music('/audio/pl.mp3','Paradise Lost');">Paradise Lost</a>
+                        <br>Some of the strangest music I've written.<br><br>
+                        Based on Milton's Epic, Paradise Lost<br>explores the fall of Eden.
+                    </div>
+                    <br><br>
+                    <div class="grow">
+                        <a href="#slide-2" onclick="cs_change_music('/audio/Clouds.mp3','Clouds');">Clouds</a>
+                        <br>I really like clouds<br>
+                    </div>
+                    <div class="grow">
+                        <a href="#slide-2" onclick="cs_change_music('/audio/Sym1.mp3','Symphony No. 1');">Symphony No. 1</a>
+                        <br>First movement of my first Symphony.<br><br>
+                        I tried to create an epic orchestral sound<br>while having contrasting moments of intimacy.
+                    </div>
+                </div>
+              </div>
+              <div id="slide-3">
+                <div class="slidebox">
+                    <div class="grow">
+                        <a href="https://enterraofficial.com/" target="_blank">Enterra
+                        <br><img src="/img/01.PNG" width="25%"></a>
+                        <br>3D Platformer video game written in c++
+                    </div>
+                    <div class="grow">
+                        <h1>This Website</h1>
+                        <br>Programmed by myself in HTML and javascript.
+                    </div>
+                </div>
+                <div class="slidebox">
+                    <div class="grow">
+                        <h1>Much More</h1>
+                        <ul>
+                            <li>Proficient in C++, GML, HTML, Java, Javascript and Python</li>
+                            <li>Learns new languages extremely quickly</li>
+                            <li>First place in Spokane Valley 2018 Hackathon</li>
+                            <li>Software featured on front page of Gamejolt.com</li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
             </div>
-            <div class="textBody">
-              My first commission as a programmer was to build a website at the age of 13. My client was a friend of my Mom's, who sadly moved away and I didn't get a chance to work
-              with them anymore. Come high school I start writing and programing more. I had <a href="https://gamejolt.com/games/the-lord-of-the-flies/40286" target="_blank">
-              this game</a> featured on the front of gamejolt. Through high school I continued programming and composing, eventually learning brass instruments. My first commissioned
-              arrangement was for my school, where I would then write many arrangements for our basketball games. "You know your band is cool when they play Pantera" is my favorite
-              thing anyone has said about my arrangements.
+            <div id="audioContainer">
+                <span id="myspan"> 2012 </span>
+                <audio id ="my-audio" controls>
+                    <source src="audio/2012.mp3" type="audio/mpeg">
+                    
+                </audio>
             </div>
-            <div class="textBody">
-              I joined the Columbians Drum and Bugle corps in 2017, marching euphonium for the summer. My senior year of high school had me winning a programming competetion with
-              a coupole friends. I was the programmer where my other friends were creating assets and
-              giving me ideas for the game. We created a procedurally generated platformer game, winning first place. The rest of the year was filled with music commissions and
-              developing software for marching band drill creation. For my classes I would create visualizations of subjects we were learning, such as a 3d animation of different
-              cell functions.
-            </div>
-            <div class="textBody">
-              After graduating high school I attended Whitworth University to study music composition. Throughout college I developed more software and wrote for many commissioned work.
-              My work started to get international, such as when I arranged 5 jazz suites for an orchestra in Montreal, Canada. My knowledge in computer science grew as well, where
-              I learned more programming languages and important software, such as Blender, Unreal Engine, and Photoshop. The summer before my senior year I got hired as a door-to-door
-              salesman for Fox Pest Control in Louisiana, living there for a few months.
-            </div>
-          </div>
-        </div>
+
+
+        <script type="text/javascript">
+            function cs_change_music(music,name)
+            {
+                document.getElementById("myspan").innerHTML=name;
+                document.getElementById("my-audio").pause();
+                document.getElementById("my-audio").setAttribute('src', music);
+                document.getElementById("my-audio").load();
+                document.getElementById("my-audio").play();
+            }
+        </script>
     </body>
-    <footer>
-    </footer>
 </html>
