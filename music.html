@@ -5,8 +5,9 @@
         <meta name = "viewport" content = "width=device-width">
         <meta name = "description" content = "Covering music, computer science and other topics.">
         <meta name = "author" content = "Chris Price">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7616627780232147"
+     crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/themes/main.css" type="text/css">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7616627780232147" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
@@ -15,11 +16,11 @@
         <h1 class="title">Music</h1>
         <main>
             <div class="post_line">
-                <ul style="list-style-type:none;">
+                <ul id = "post_replace" style="list-style-type:none;">
                 </ul>
                 <script src="posts.js"></script>
                 <script>
-                    var container = document.querySelector('ul');
+                    var container = document.querySelector("#post_replace");
                     let index = 0;
                     for (let item of items) {
                         index++;
