@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Chris Price - Composer, Developer, Artist</title>
+        <title>Chris Price - Music</title>
         <meta name = "keywords" content ="chris,price,composer,christian,music,arranger,VoxPrincipalis">
         <meta name = "viewport" content = "width=device-width">
         <meta name = "description" content = "Covering music, computer science and other topics.">
@@ -11,8 +11,7 @@
         <header>
         </header>
         <script id="nav_replace" src="nav.js"></script>
-        <div id="homephoto"></div>
-        <h1 class="title">Chris Price</h1>
+        <h1 class="title">Music</h1>
         <main>
             <div class="post_line">
                 <ul style="list-style-type:none;">
@@ -40,9 +39,12 @@
                         </post>
                     </li>
                     `
-                    if(index < 3)
+                    if(item.type.toUpperCase().search("MUSIC") != -1)
                     {
-                        container.insertAdjacentHTML('beforeend', html);
+                        if(index < 10)
+                        {
+                            container.insertAdjacentHTML('beforeend', html);
+                        }
                     }
                 }
                 </script>
