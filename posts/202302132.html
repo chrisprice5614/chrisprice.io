@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Chris Price - Intro to Synthesizers</title>
+        <meta name = "keywords" content ="chris,price,composer,christian,music,arranger,VoxPrincipalis">
+        <meta name = "viewport" content = "width=device-width">
+        <meta name = "description" content = "Covering music, computer science and other topics.">
+        <meta name = "author" content = "Chris Price">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7616627780232147"
+     crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../themes/main.css" type="text/css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <script id="nav_replace" src="/nav.js"></script>
+        <img src="/media/202302132/thumb.png" style="width: 100%;">
+        
+        <main class="article">
+            <div class="date">Monday, February 13th, 2023</div>
+            <h1 class="post_title">Intro to Synthesizers</h1>
+            <div class="author">
+                By <span class="green">Chris Price</div>
+            </div>
+            <div class="social_links">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://imchrisprice.com/posts/202302132.html"><img src="/media/facebook.png" width="32px"></a>
+                <a href="https://twitter.com/intent/tweet?text=https://imchrisprice.com/posts/202302132.html"><img src="/media/twitter.png" width="32px"></a>
+            </div>
+            <h2>What is Digital Audio Synthesis?
+            </h2>
+            <p>
+                You may have heard the term <i>analog</i> at one point in your life. The word itself refers to a continuous signal, such as voltage, position or amplitude. Each of those
+                variables are very important when talking about synthesizers and digital audio synthesis. We all know that sound is vibration, and that speakers make sound by creating
+                vibration. Speakers receive analog data from the device they're connected to, and then convert that voltage into a position. The speaker will move back if the voltage is low,
+                and out if the voltage is high. This back and forth movement is what ultimately creates sound from the speaker.
+            </p>
+            <h2>Sample Rate</h2>
+            <p>
+                The standard for speakers is to be able to move 44,100 times in one second. This number wasn't arbitrarily chosen, but rather was decided based on human hearing.
+                Humans can hear roughly 22,000 changes in movement per second, so if we were to double this amount and slightly increase it just in case some data is lost, humans
+                will be able to hear the speaker's audio very clearly.
+            </p>
+            <p>
+                This number, 44,100, is known as the sample rate. Some speakers can produce a higher sample rate while others can't produce a sample rate higher than 2,000. The sample
+                rate is named as such because each position of the speaker is known as a <span class="green">sample</span>, not to be confused with the DJ term "sampling." A sample
+                rate of 44,100 means that the speaker can move 44,100 times in one second. The higher the sample rate, the smoother the audio sound. Think of it as the X-Axis of audio.
+            </p>
+            <img src="/media/202302132/01.png" style="display: block; width: 90%; margin-left:auto; margin-right:auto;">
+            <div class="caption">The number of samples in one second is the sample rate. One single sample is one position of the speaker.</div>
+            <h2>Bit Depth</h2>
+            <p>
+                For those of you who are here with a computer science background, you may know that 32 bit integers can store more data than 16 bit integers. The exact same applies
+                to digital audio synthesis. The bit depth of a speaker or audio file is how smooth the amplitude of the audio can be. Think of it as the Y axis of the audio.
+            </p>
+            <img src="/media/202302132/02.png" style="display: block; width: 75%; margin-left:auto; margin-right:auto;">
+            <div class="caption">With a small bit depth, the speaker doesn't have a good range to smoothly move back and forth.</div>
+            <p>
+                Low bit depth and sample rate is what gives old computer audio its unique computery sound. If you were to "crush" your audio, you'd be lowering the bit depth and
+                sample rate. Each number you increase the bit depth will increase the sound quality by a power of two, meaning a bit depth difference of 3 to 4 is extremely tiny
+                compared to the difference between 7 to 8.
+            </p>
+            
+            <h2>Generating Audio</h2>
+            <p>
+                Now that we have the basics of bit depths and sample rates, we can understand how audio itself is generated. First, know your bit depth and your sample rate. If
+                you have a sample rate of 44,100 it's easy to get an A with tuning of 440. We'll see why in a second. With your sample rate, you need to know what the highest value
+                is. If you're sample rate is 8, the highest value is one less than 2^8, which is 255. Meaning, if you generate a sine wave that goes betwen 0 and 255 440 times, you
+                can create a sine wave with the sound of an A 440.
+            </p>
+            <p>
+                Getting the amplitude of the sine wave is the easy part. In most programming languages, sine goes between -1 and 1. Most programming languages also offer a
+                degree version of sine, which will help us out a lot. So our value can be 122+(dsine(x)*122), where 122 is our middle ground and x is our angle. Now we need to
+                create a nice x angle. Let's let t be the time, where t is continuously moving with the speed of the sample rate. So t will start at 0, move to 44,100 in the first
+                second, and then 88,200 in the second second. Our current x function is x = t, so we need to modify the function to have a rotation 440 times a second.
+            </p>
+            <p>
+                With x = t, there are 122.5 cycles per second, making the sound of a slightly flat B2. To find what we need to divide t by to get 440 cycles per second (or hertz <i>hz</i>)
+                we divide 440 by 122.5, giving us 3.5918. In our function we modify it to be x = t/3.5918. Now, the sound we get is a beautiful A=440 sine wave.
+            </p>
+            <p>
+                More advanced tutorials will be released on how to make more sounds with math.
+            </p>
+
+            
+        </main>
+        <script id="foot_replace" src="/footer.js"></script>
+    </body>
+</html>
