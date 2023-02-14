@@ -23,9 +23,14 @@
                 By <span class="green">Chris Price</div>
             </div>
             <div class="social_links">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://imchrisprice.com/posts/202302131.html"><img src="/media/facebook.png" width="32px"></a>
-                <a href="https://twitter.com/intent/tweet?text=https://imchrisprice.com/posts/202302131.html"><img src="/media/twitter.png" width="32px"></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://imchrisprice.com/posts/202302131.html"><ion-icon title="Share to Facebook" name="logo-facebook" class="social_icon"></ion-icon></a>
+                <a href="https://twitter.com/intent/tweet?text=https://imchrisprice.com/posts/202302131.html"><ion-icon title="Share to Twitter" name="logo-twitter" class="social_icon"></ion-icon></a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://imchrisprice.com/posts/202302131.html"><ion-icon title="Share to LinkedIn" name="logo-linkedin" class="social_icon"></ion-icon></a>
+                <a href="http://www.pinterest.com/pin/create/button/?url=https://imchrisprice.com/posts/202302131.html"><ion-icon title="Share to Pinterest" name="logo-pinterest" class="social_icon"></ion-icon></a>
+                <a href="http://www.reddit.com/submit?url=https://imchrisprice.com/posts/202302131.html"><ion-icon title="Share to Reddit" name="logo-reddit" class="social_icon"></ion-icon></a>
+                <a><ion-icon title="Copy Link to Clipboard" name="link-outline" onClick="copyText()" class="social_icon"></ion-icon></a>
             </div>
+            <div id="notification">Link copied to clipboard!</div>
             <h2>A New Corps</h2>
             <p>
                 Over the summer, a call was received inquiring about drum corps music. The call was made by a close friend of mine, <spawn class="green">Austin Moldenhauer</spawn>,
@@ -72,5 +77,16 @@
             
         </main>
         <script id="foot_replace" src="/footer.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+        <script>
+            function copyText() {
+          
+                /* Copy text into clipboard */
+                navigator.clipboard.writeText("https://imchrisprice.com/posts/202302131.html");
+                var container = document.querySelector("#notification");
+                container.style.visibility = "visible";
+            }
+        </script>
     </body>
 </html>
