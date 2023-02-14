@@ -66,6 +66,41 @@
 
             
         </main>
+        <div class="prefoot">
+            <h1 class="important">Latest Articles</h1>
+            <div id="grid-std">
+
+            </div>
+        </div>
+        
+        <script src="/posts.js"></script>
+        <script>
+            var container = document.querySelector("#grid-std");
+            let index = 0;
+            for (let item of items) {
+                index++;
+            var html = `
+            <div class="blog-grid-item">
+            <a href=${item.link}>
+                <article class="post-preview">
+                    <figure class="post-preview-img">
+                        <img class="img-full" src=${item.img}>
+                    </figure>
+                    <div class="post-preview-content">
+                        <div class="green">${item.type}</div>
+                        <p>${item.title}</p>
+                        <div>${item.author}</div>
+                    </div>
+                </article>
+            </a>
+        </div>
+            `
+            if(index < 5)
+            {
+                container.insertAdjacentHTML('beforeend', html);
+            }
+        }
+        </script>
         <script id="foot_replace" src="/footer.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>

@@ -43,7 +43,7 @@
                     </li>
                     <br>
                     `
-                    if(index < 3)
+                    if(index < 4)
                     {
                         container.insertAdjacentHTML('beforeend', html);
                     }
@@ -51,6 +51,43 @@
                 </script>
             </div>
         </main>
-        <script id="foot_replace" src="footer.js"></script>
+        <div class="prefoot">
+            <h1 class="important">Latest Articles</h1>
+            <div id="grid-std">
+
+            </div>
+        </div>
+        
+        <script src="/posts.js"></script>
+        <script>
+            var container = document.querySelector("#grid-std");
+            let indexx = 0;
+            for (let item of items) {
+                index++;
+            var html = `
+            <div class="blog-grid-item">
+            <a href=${item.link}>
+                <article class="post-preview">
+                    <figure class="post-preview-img">
+                        <img class="img-full" src=${item.img}>
+                    </figure>
+                    <div class="post-preview-content">
+                        <div class="green">${item.type}</div>
+                        <p>${item.title}</p>
+                        <div>${item.author}</div>
+                    </div>
+                </article>
+            </a>
+        </div>
+            `
+            if(indexx < 5)
+            {
+                container.insertAdjacentHTML('beforeend', html);
+            }
+        }
+        </script>
+        <footer>
+            <script id="foot_replace" src="footer.js"></script>
+        </footer>
     </body>
 </html>
