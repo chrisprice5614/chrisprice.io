@@ -2,6 +2,16 @@
 //Always add to the top
 var items = [
     {
+        id: 202302143,
+        title: "Making Simplex Noise, Simple",
+        date: "Tuesday, February 14th, 2023",
+        author: "Chris Price",
+        text: "Simplex noise is a type of noise function that is commonly used in computer graphics and other fields to create random patterns with certain desirable properties. It involves dividing the space into regular grid cells and interpolating between the values of random vectors at the corner points.",
+        img: "/media/202302143/thumb.png",
+        type: "cs",
+        link: "/posts/202302143.html"
+    },
+    {
         id: 202302142,
         title: "If You Hear This Song, Someone Dies",
         date: "Tuesday, February 14th, 2023",
