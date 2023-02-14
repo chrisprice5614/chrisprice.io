@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Chris Price - ASCII 10 vs ASCII 13</title>
+        <meta name = "keywords" content ="chris,price,composer,christian,music,arranger,VoxPrincipalis">
+        <meta name = "viewport" content = "width=device-width">
+        <meta name = "description" content = "Covering music, computer science and other topics.">
+        <meta name = "author" content = "Chris Price">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7616627780232147"
+     crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../themes/main.css" type="text/css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <script id="nav_replace" src="/nav.js"></script>
+        <img src="/media/202302141/01.jpg" style="width: 100%;">
+        
+        <main class="article">
+            <div class="date">Tuesday, February 14th, 2023</div>
+            <h1 class="post_title">ASCII 10 or ASCII 13?</h1>
+            <div class="author">
+                By <span class="green">Chris Price</div>
+            </div>
+            <div class="social_links">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://imchrisprice.com/posts/202302141.html" target="_blank"><ion-icon title="Share to Facebook" name="logo-facebook" class="social_icon"></ion-icon></a>
+                <a href="https://twitter.com/intent/tweet?text=https://imchrisprice.com/posts/202302141.html" target="_blank"><ion-icon title="Share to Twitter" name="logo-twitter" class="social_icon"></ion-icon></a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://imchrisprice.com/posts/202302141.html" target="_blank"><ion-icon title="Share to LinkedIn" name="logo-linkedin" class="social_icon"></ion-icon></a>
+                <a href="http://www.pinterest.com/pin/create/button/?url=https://imchrisprice.com/posts/202302141.html" target="_blank"><ion-icon title="Share to Pinterest" name="logo-pinterest" class="social_icon"></ion-icon></a>
+                <a href="http://www.reddit.com/submit?url=https://imchrisprice.com/posts/202302141.html" target="_blank"><ion-icon title="Share to Reddit" name="logo-reddit" class="social_icon"></ion-icon></a>
+                <ion-icon title="Copy Link to Clipboard" name="link-outline" onClick="copyText()" class="social_icon"></ion-icon>
+            </div>
+            <div id="notification">Link copied to clipboard!</div>
+            <h2>Parsing Problem</h2>
+            <p>
+                If you're parsing through a ton of files like I often do, you've probably run into a notorious character making a getting to the next line a hastle. One would assume
+                that looking for <b>\n</b> would be enough forcatching a new line, but then you run into another odd character that seems to also create a new line. ASCII 13 is the
+                pesky piece of data that's summoning this new line, but what exactly is it?
+            </p>
+            <p>
+                In old DOS terminals, ASCII 10, also known as new line, line feed or \n, would shift the upcoming text down to the next line, but not shift the text back to the
+                start of the column.
+            </p>
+            <img src="/media/202302141/02.png" style="display: block; width: 75%; margin-left:auto; margin-right:auto;">
+            <h2>That's where ASCII 13 comes in</h2>
+            <p>
+                ASCII 13 is known as the carriage return, named as such because it moves the line back to the left. The name comes from typewriters that would finish a line, move down
+                and then move to the left to start a new line. Carriage returns are often used as <b>\r</b> when handling text files with code. In older computer typing software,
+                new lines would be created by making a line feed, followed by a carriage return, just as a typewriter would do.
+            </p>
+            <p>
+                In most of today's text files, carriage returns are often thrown out and not worried about, only using the line feed. This is why if you try to load newer text files
+                into older text readers the format will be very off. Carriage returns still show up in quite a few formats though, such as excel files. If one were to convert an excel
+                file into a text file to parse the data, they'd run into the pesky carriage return.
+            </p>
+            <img src="/media/202302141/03.jfif" style="display: block; width: 75%; margin-left:auto; margin-right:auto;">
+            <h2>Dealing with ASCII 13</h2>
+            <p>
+                Often times when I'm parsing through text, I throw away the carriage return. I use GameMaker Studio 2.3 for doing most of my programming work, so it's easy to
+                get rid of it with <b>string_replace_all(str,ansi_char(13),"");</b>
+            </p>
+            <p>
+                When writing a text file via code I include it just in case a reader doesn't handle text files very well. When programming, it's always very important to remember
+                accessability, backwards compatibility, and sustainability. You want your programs to run easily on old systems, current systems and future systems. Keeping the 
+                carriage return will ensure that your text file will be easily read by most applications.
+            </p>
+
+            
+        </main>
+        <script id="foot_replace" src="/footer.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+        <script>
+            function copyText() {
+          
+                /* Copy text into clipboard */
+                navigator.clipboard.writeText("https://imchrisprice.com/posts/202302141.html");
+                var container = document.querySelector("#notification");
+                container.style.visibility = "visible";
+            }
+        </script>
+    </body>
+</html>

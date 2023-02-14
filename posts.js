@@ -2,6 +2,16 @@
 //Always add to the top
 var items = [
     {
+        id: 202302141,
+        title: "ASCII 10 or ASCII 13?",
+        date: "Tuesday, February 14th, 2023",
+        author: "Chris Price",
+        text: "When messing around with text files, you may have noticed that a pesky ASCII 10 or ASCII 13 character appears. What exactly are these characters and what do they mean? Is there really a difference between the two? Definitely, let's see what the difference is.",
+        img: "/media/202302141/thumb.jpg",
+        type: "cs",
+        link: "/posts/202302141.html"
+    },
+    {
         id: 202302132,
         title: "Intro to Synthesizers",
         date: "Monday, February 13th, 2023",
