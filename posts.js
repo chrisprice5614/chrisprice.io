@@ -2,6 +2,16 @@
 //Always add to the top
 var items = [
     {
+        id: 202302142,
+        title: "If You Hear This Song, Someone Dies",
+        date: "Tuesday, February 14th, 2023",
+        author: "Chris Price",
+        text: "This eerie chant has been used for many years to represent death. Originally written as an old orthodox plainchant, this snippet of music is used by musicians everywhere to signify death. It's played more often than one would think.",
+        img: "/media/202302142/thumb.jpg",
+        type: "music",
+        link: "/posts/202302142.html"
+    },
+    {
         id: 202302141,
         title: "ASCII 10 or ASCII 13?",
         date: "Tuesday, February 14th, 2023",
