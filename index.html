@@ -1,102 +1,119 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Custom PreHead code is injected here -->
+    
+
     <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta charset="utf-8"/>
 
-        <title>Mt. Spokane Young Single Adults Branch</title>
-        <meta name = "keywords" content ="lds, latter-day saints, latter day saints, ysa, spokane">
-        <meta name = "viewport" content = "width=device-width">
-        <meta name = "description" content = "Information about the Mt. Spokane Young Single Adults Branch">
-        <meta name = "author" content = "Chris Price">
-        <link rel="stylesheet" href="/themes/main.css" type="text/css">
-    </head>
-    <body>
-        <header>
-        </header>
-        <script id="nav_replace" src="nav.js"></script>
-        <div id="homephoto"></div>
-        <h1 class="title">| Mt. Spokane Young Single Adults Branch |</h1>
+        <!-- Builtin injector for disabling cache -->
+        <meta http-equiv="pragma" content="no-cache"/>
 
-        <!-- partial:index.partial.html -->
-        <div id="calendar"></div>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
-        <!-- partial -->
-        <script  src="./script.js"></script>
+        <!-- Set the title bar of the page -->
+        <title>Created with GameMaker</title>
 
-        <main>
-            <div class="post_line">
-                <ul id = "post_replace" style="list-style-type:none;">
-                </ul>
-                <script src="posts.js"></script>
-                <script>
-                    var container = document.querySelector("#post_replace");
-                    let index = 0;
-                    for (let item of items) {
-                        index++;
-                    var html = `
-                    <li>
-                        <post>
-                            <a href="${item.link}" style="text-decoration: none; ">
-                                <figure class = "float">
-                                    <img src=${item.img} width="100%" style="float: left;">
-                                </figure>
-                                <h4>
-                                    ${item.title}
-                                </h4>
-                                <p>
-                                    ${item.text}
-                                </p>
-                            </a>
-                        </post>
-                    </li>
-                    <br>
-                    `
-                    if(item.type.toUpperCase().search("EVENTS") != -1)
-                    {
-                        if(index < 4)
-                        {
-                            container.insertAdjacentHTML('beforeend', html);
-                        }
-                    }
-                }
-                </script>
-            </div>
-        </main>
-        <div class="prefoot">
-            <h1 class="important">News/Events</h1>
-            <div id="grid-std">
-
-            </div>
-        </div>
+        <!-- Custom PreStyle code is injected here -->
         
-        <script src="/posts.js"></script>
-        <script>
-            var container = document.querySelector("#grid-std");
-            let indexx = 0;
-            for (let item of items) {
-                indexx++;
-            var html = `
-            <div class="blog-grid-item">
-            <a href=${item.link}>
-                <article class="post-preview">
-                    <figure class="post-preview-img">
-                        <img class="img-full" src=${item.img}>
-                    </figure>
-                    <div class="post-preview-content">
-                        <div class="green">${item.type}</div>
-                        <p>${item.title}</p>
-                        <div>${item.author}</div>
-                    </div>
-                </article>
-            </a>
-        </div>
-            `
-            if(indexx < 5)
-            {
-                container.insertAdjacentHTML('beforeend', html);
+
+        <!-- Set the background colour of the document -->
+        <style>
+            body {
+                background: #0;
+                color: #cccccc;
+                margin: 0px;
+                padding: 0px;
+                border: 0px;
             }
-        }
-        </script>
-        <footer>
-            <script id="foot_replace" src="footer.js"></script>
-        </footer>
+
+            canvas {
+                image-rendering: optimizeSpeed;
+                -webkit-interpolation-mode: nearest-neighbor;
+                -ms-touch-action: none;
+                touch-action: none;
+                margin: 0px;
+                padding: 0px;
+                border: 0px;
+            }
+            :-webkit-full-screen #canvas {
+                width: 100%;
+                height: 100%;
+            }
+            :-webkit-full-screen {
+                width: 100%;
+                height: 100%;
+            }
+            
+            /* Custom Runner Styles */
+            div.gm4html5_div_class {
+                margin: 0px;
+                padding: 0px;
+                border: 0px;
+            }
+            div.gm4html5_login {
+                padding: 20px;
+                position: absolute;
+                border: solid 2px #000000;
+                background-color: #404040;
+                color:#00ff00;
+                border-radius: 15px;
+                box-shadow: #101010 20px 20px 40px;
+            }
+            div.gm4html5_cancel_button {
+                float: right;
+            }
+            div.gm4html5_login_button {
+                float: left;
+            }
+            div.gm4html5_login_header {
+                text-align: center;
+            }
+            /* END - Custom Runner Styles */
+            
+        </style>
+
+        <!-- Custom PostStyle code is injected here -->
+        
+
+        <!-- Builtin injector for injecting flurry analytics code -->
+        
+    </head>
+
+    <!-- Custom PostHead code is injected here -->
+    
+
+    <!-- Custom PreBody code is injected here -->
+    
+
+    <body>
+        <div class="gm4html5_div_class" id="gm4html5_div_id">
+            
+            <!-- Builtin injector for splash screen -->
+            
+
+            <!-- Create the canvas element the game draws to -->
+            <canvas id="canvas" width="1366" height="768" >
+                <p>Your browser doesn't support HTML5 canvas.</p>
+            </canvas>
+        </div>
+
+        <!-- Run the game code -->
+        <script type="text/javascript" src="html5game/imChris.js?cachebust=371196363"></script>
+
+        <!-- Builtin injector for injecting runner path -->
+        
+
+        <script>window.onload = GameMaker_Init;</script>
+
+        <!-- Builtin injector for injecting google analytics code -->
+        
+
     </body>
+
+    <!-- Custom PostBody code is injected here -->
+    
 </html>
